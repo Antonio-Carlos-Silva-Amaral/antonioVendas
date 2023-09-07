@@ -1,7 +1,6 @@
 import { lerLocalStorage,desenhorProdutoNoCarrinhoSimples } from "./src/utilidades";
 
 function criarPedidoHistorico (pedidoComData) {
-    // .toLocaleDateString(): Este é um método do objeto de data (Date) que converte a data em uma string no formato de data localizado, considerando as configurações de idioma e região do navegador ou do ambiente em que o JavaScript está sendo executado. 
     const elementoPedido = `<p class='text-xl text-bold my-4'>${new Date(pedidoComData.dataPedido).toLocaleDateString('pt-br',{
         hour: '2-digit',
         minute: '2-digit'

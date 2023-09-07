@@ -12,7 +12,6 @@ function exibirTodos (){
 
 function esconderMasculinos () {
     exibirTodos();
-    // Array.from transfoma todos que tem a class masculino e faz um array 
    const produtosMasculinos = Array.from(catalogoProdutos.getElementsByClassName('masculino'));
 
    for(const produto of produtosMasculinos){
@@ -21,7 +20,6 @@ function esconderMasculinos () {
 }
 function esconderFemininos () {
     exibirTodos();
-    // Array.from transfoma todos que tem a class masculino e faz um array 
    const produtosFemininos = Array.from(catalogoProdutos.getElementsByClassName('feminino'));
 
    for(const produto of produtosFemininos){

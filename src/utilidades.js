@@ -74,15 +74,10 @@ export const catalogo = [
 ];
 
 export function salvarLocalStorege (chave, informacao){
-    //setItem e pra jogar no localsatorage
-    //json.stringify json lida com objetos e stringify transforma o objeto em texto
-    // esse informacao eu to recebendo o objeto que armazena os produto
     localStorage.setItem(chave,  JSON.stringify(informacao));
 }
 
 export function lerLocalStorage (chave){
-    // getItem para pegar o valor da chave
-    // ele faz contrario ele transforma em objeto
    return JSON.parse(localStorage.getItem(chave));
 }
 
@@ -91,7 +86,6 @@ export function apagarDoLocalStorage(chave){
 }
 
 export function desenhorProdutoNoCarrinhoSimples(idProduto,idContainerHtml,quantidadeProduto){
-    // find significa ache, aqui quando chama essa funcao ele recebe o idProduto e com a variavel produto recupera este produto
     const produto = catalogo.find(p => p.id == idProduto)
     const containerProdutosCarrinho = document.getElementById(idContainerHtml);
 
@@ -117,8 +111,6 @@ export function desenhorProdutoNoCarrinhoSimples(idProduto,idContainerHtml,quant
     </div>
 `
   elementoArticle.innerHTML = cartaoProdutoCarrinho;
-  //appendChild ele joga os elementos para dentro como filho
+ 
   containerProdutosCarrinho.appendChild(elementoArticle); 
-
-  
 }

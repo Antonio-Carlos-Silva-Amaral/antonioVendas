@@ -14,7 +14,6 @@ function precoHistoricoPedido (){
 }
 
 function finalizarCompra (evento){
-    // Impede o comportamento padrão de seguir o link ou comportamento padrao de um botao e poder usar um codigo personalizado.
     evento.preventDefault();
     const idsProdutoCarrinhoComQuantidade = lerLocalStorage('carrinho') ?? {};
     if(Object.keys(idsProdutoCarrinhoComQuantidade).length === 0){
@@ -27,7 +26,6 @@ function finalizarCompra (evento){
     }
 
     const historicoDePedidos = lerLocalStorage('historico') ?? [];
-    // ... ele pega a lista antiga e gera uma nova com as novas informações
     const historicoDePedidosAtualizado = [pedidoFeito, ...historicoDePedidos];
 
     salvarLocalStorege('historico', historicoDePedidosAtualizado)
