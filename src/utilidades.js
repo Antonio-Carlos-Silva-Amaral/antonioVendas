@@ -90,7 +90,7 @@ export function desenhorProdutoNoCarrinhoSimples(idProduto,idContainerHtml,quant
     const containerProdutosCarrinho = document.getElementById(idContainerHtml);
 
     const elementoArticle = document.createElement("article");
-    const articleClass = ['flex','bg-stone-200','rounded-lg','p-1','relative','mb-2','w-96']
+    const articleClass = ['flex','bg-stone-200','rounded-lg','p-1','relative','mb-2','w-full']
     for (const articleClasses of articleClass){
         elementoArticle.classList.add(articleClasses)
     }
