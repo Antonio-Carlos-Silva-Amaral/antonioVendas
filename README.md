@@ -1,5 +1,3 @@
-# Antônio Vendas
-
 # Ecommerce
 
 Este é um projeto de e commerce, para aprimorar minhas habilidas com javascript.
