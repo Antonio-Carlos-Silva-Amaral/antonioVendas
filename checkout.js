@@ -19,10 +19,14 @@ function finalizarCompra (evento){
     if(Object.keys(idsProdutoCarrinhoComQuantidade).length === 0){
         return
     }
+
+    const valorFinalCompra = localStorage.getItem('precoTotalCarrinho')
     const dataAtual = new Date();
     const pedidoFeito = {
         dataPedido : dataAtual,
-        pedido: idsProdutoCarrinhoComQuantidade
+        pedido: idsProdutoCarrinhoComQuantidade,
+        precoFinal: valorFinalCompra
+
     }
 
     const historicoDePedidos = lerLocalStorage('historico') ?? [];
